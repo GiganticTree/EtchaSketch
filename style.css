@@ -2,19 +2,29 @@ html {
     margin:0;
     padding:0;
     border:0;
+    background-size: 960px;
 }
 
 .container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
     grid-column-gap: 1px;
 }
 
 .gridPiece {
     border-color: black;
-    background-color:blue;
-    height: 15px;
-    width:15px;
+    background-color:green;
+    height:50px;
+    width:50px;
     margin:1px;
+}
+
+.gridPiece:hover {
+    background-color:yellow;
+}
+
+
+.touched {
+    background-color: yellow;
 }
 
