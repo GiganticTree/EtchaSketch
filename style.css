@@ -1,0 +1,20 @@
+html {
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 1px;
+}
+
+.gridPiece {
+    border-color: black;
+    background-color:blue;
+    height: 15px;
+    width:15px;
+    margin:1px;
+}
+
