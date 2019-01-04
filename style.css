@@ -2,6 +2,7 @@ html {
     padding:0;
     border:0;
     box-sizing:border-box;
+    text-align: center;
 }
 
 .container {
@@ -9,6 +10,10 @@ html {
     margin: 10px auto;
 }
 
+/* By floating left, and setting a concrete size to the container
+element, this makes the tiles fill perfectly into
+the container size without needing to specify
+how many tiles wide the grid will be*/
 .tile {
     background-color:black;
     opacity: .05;

@@ -29,9 +29,19 @@ window.addEventListener('click', function(e) {
     }
 });
 
+let penOn = 0;
+window.addEventListener('keydown', function(e) {
+    if (e.keyCode ==83) {
+        penOn += 1;
+    }
+}
+);
+
+
+
 //makes tile 20% darker each mouseover
 window.addEventListener('mouseover', function(e) {
-   if(e.target.classList.contains('tile') && e.target.style.opacity!=1) {
+   if(e.target.classList.contains('tile') && e.target.style.opacity!=1 && penOn%2==0) {
     e.target.style.opacity =e.target.style.opacity -.1 + .35; 
     e.target.style.background=colorName;
    }
@@ -93,7 +103,7 @@ let tiles = document.getElementsByClassName('tile');
 let clearGrid = document.querySelector('#cleargrid');
 clearGrid.addEventListener('click',function(){
    for (i=0; i<tiles.length;i++) {
-    tiles[i].style.opacity='.05';
+    tiles[i].style.opacity=.05;
     tiles[i].style.background='black';
    }
 
