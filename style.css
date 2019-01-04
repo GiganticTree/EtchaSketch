@@ -16,7 +16,7 @@ the container size without needing to specify
 how many tiles wide the grid will be*/
 .tile {
     background-color:black;
-    opacity: .05;
+    opacity: 0.05;
     float:left;
     outline: 1px solid white;
 }

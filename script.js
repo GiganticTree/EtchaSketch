@@ -39,9 +39,9 @@ window.addEventListener('keydown', function(e) {
 
 
 
-//makes tile 20% darker each mouseover
+//makes tile 25% darker each mouseover
 window.addEventListener('mouseover', function(e) {
-   if(e.target.classList.contains('tile') && e.target.style.opacity!=1 && penOn%2==0) {
+   if(e.target.classList.contains('tile') && e.target.style.opacity<1 && penOn%2==0) {
     e.target.style.opacity =e.target.style.opacity -.1 + .35; 
     e.target.style.background=colorName;
    }
@@ -107,4 +107,15 @@ clearGrid.addEventListener('click',function(){
     tiles[i].style.background='black';
    }
 
+});
+
+
+
+ window.addEventListener('dblclick', function(e) {
+    if(e.target.classList.contains('color')) {
+        for (i=0; i<tiles.length;i++) {
+            tiles[i].style.opacity=1;
+            tiles[i].style.background=colorName;
+           }
+    }
 });
